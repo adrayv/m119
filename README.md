@@ -9,5 +9,7 @@ ___
 ```
 git clone https://github.com/adrayv/m119.git
 
+cd m119
+
 make motion
 ```
