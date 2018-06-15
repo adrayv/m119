@@ -97,7 +97,7 @@ def button_publish(button, mac):
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
     if button==4:
         motion="Hand Raised"
-        messageSent="event"+motion + " @ " + hexi_addr
+        messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
 hexi_addr = None
 
