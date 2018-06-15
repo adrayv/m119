@@ -13,6 +13,8 @@ cd m119
 
 make motion
 ```
+### Pi to AWS Comm's
+if boto3 isn't installed, run "sudo pip install boto3"
 cd m119/basicPubSub
 
 Type command below in Terminal to run Cognito script to push data from Pi to Python:

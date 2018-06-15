@@ -94,4 +94,4 @@ loopCount = 0
 while True:
     myAWSIoTMQTTClient.publish(topic, "New Message " + str(loopCount), 1)
     loopCount += 1
-    time.sleep(1)
+    time.sleep(10)
