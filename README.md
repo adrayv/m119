@@ -1,6 +1,6 @@
 # m119
 ### Hexiwear
-[Link to Hexiwear code](https://os.mbed.com/users/adrayv/code/Hexi_Final_Project/file/8a9b0eb4835d/main.cpp/)
+[Link to Hexiwear code](https://os.mbed.com/users/calvinha721/code/Hexi_Final_Project/)
 
 Binary File for Hexiwear is called:
 `Hexi_Final_Project_HEXIWEAR.bin`
