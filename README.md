@@ -5,16 +5,13 @@
 Binary File for Hexiwear is called:
 `Hexi_Final_Project_HEXIWEAR.bin`
 ___
-### Raspberry Pi
-```
-git clone https://github.com/adrayv/m119.git
 
-cd m119
-
-make motion
-```
 ### Pi to AWS Comm's
-if boto3 isn't installed, run "sudo pip install boto3"
+Download AWS IoT Core Python Development kit via https://github.com/aws/aws-iot-device-sdk-python
+NOTE: DO NOT DO PIP INSTALL METHOD; instead, follow directions from "build from source" on site above. 
+installing from PIP yields errors because Pip install is unstable.
+
+if boto3 isn't installed, run "sudo python -m install boto3"
 cd m119/basicPubSub
 
 Type command below in Terminal to run Cognito script to push data from Pi to Python:
