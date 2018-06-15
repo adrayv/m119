@@ -96,10 +96,10 @@ def button_publish(button, mac):
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
     if button==4:
-        motion="Hand Raised"
+        motion="HandRaised"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
-hexi_addr = None
+
 
 # This is a delegate for receiving BTLE events
 class BTEventHandler(DefaultDelegate):
