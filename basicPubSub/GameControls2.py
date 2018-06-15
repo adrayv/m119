@@ -1,6 +1,7 @@
 from bluepy import btle
 from bluepy.btle import Scanner, DefaultDelegate, ScanEntry, Peripheral
 import struct
+import urllib2
 
 import boto3
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
@@ -80,22 +81,27 @@ time.sleep(2)
 # The callback for when a PUBLISH message is received from the server.
 def button_publish(button, mac):
     if button==0:
+        urllib2.urlopen("https://sheltered-brook-80388.herokuapp.com/update?player=2&action=right").read()
         motion="right"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
     if button==1:
+        urllib2.urlopen("https://sheltered-brook-80388.herokuapp.com/update?player=2&action=left").read()
         motion="left"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
     if button==2:
+        urllib2.urlopen("https://sheltered-brook-80388.herokuapp.com/update?player=2&action=up").read()
         motion="up"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)    
     if button==3:
+        urllib2.urlopen("https://sheltered-brook-80388.herokuapp.com/update?player=2&action=down").read()
         motion="down"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
     if button==4:
+        urllib2.urlopen("https://sheltered-brook-80388.herokuapp.com/update?player=2&action=buzz").read()
         motion="HandRaised"
         messageSent="event "+motion + " @ " + hexi_addr
         myAWSIoTMQTTClient.publish(topic,messageSent,1)
